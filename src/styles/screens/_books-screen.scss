@@ -1,0 +1,35 @@
+.books-screen {
+  align-items: center;
+  background-color: $primary;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.books-screen__title {
+  margin-top: 5vh;
+}
+
+.books-screen__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 5vh;
+}
+
+@media screen and (max-width: 450px) {
+  .books-screen__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 451px) {
+  .books-screen__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .books-screen__grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}

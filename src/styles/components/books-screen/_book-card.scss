@@ -1,0 +1,19 @@
+.book-card {
+  background-color: coral;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  padding: 30px;
+  width: fit-content;
+  margin: 10px;
+}
+
+.book-card__title {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.book-card__items {
+  margin-top: 10px;
+}
