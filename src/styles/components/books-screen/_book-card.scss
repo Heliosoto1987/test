@@ -1,12 +1,14 @@
 .book-card {
+  align-items: center;
   background-color: coral;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   height: max-content;
   padding: 30px;
-  width: fit-content;
+  min-width: 15vw;
   margin: 10px;
+  border: none;
 }
 
 .book-card__title {
@@ -15,5 +17,10 @@
 }
 
 .book-card__items {
+  margin-top: 10px;
+}
+
+.book-card__items--title {
+  font-weight: bold;
   margin-top: 10px;
 }
