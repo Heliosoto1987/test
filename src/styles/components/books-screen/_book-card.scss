@@ -2,13 +2,16 @@
   align-items: center;
   background-color: coral;
   border-radius: 10px;
+  border: none;
   display: flex;
   flex-direction: column;
   height: max-content;
+  justify-content: center;
   padding: 30px;
   min-width: 15vw;
+  min-height: 10vw;
   margin: 10px;
-  border: none;
+  overflow: auto;
 }
 
 .book-card__title {

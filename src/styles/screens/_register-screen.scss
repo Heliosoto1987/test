@@ -1,0 +1,27 @@
+.register-screen{
+    align-items: center;
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+.register__form{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.register__form--inputs{
+    margin: 10px;
+  
+}
+
+.register__form--labels {
+    cursor: pointer;
+}
+
+.register__form--btn-submit{
+    cursor: pointer;
+}

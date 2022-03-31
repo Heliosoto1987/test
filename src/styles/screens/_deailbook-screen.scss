@@ -1,0 +1,31 @@
+.detailbook-screen{
+    align-items: center;
+    background-color: $primary;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.detailbook-screen__box{
+    height: 20vh;
+    min-width: 20vw;
+    border: solid black;
+    box-shadow: 5px 5px;
+    padding: 3%;
+    background-color: wheat;
+}
+
+.detailbook-screen__box--items{
+    margin: 10px;
+}
+
+.detailbook-screen__btn-back{
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bolder;
+    background-color: transparent;
+    border: 0;
+    font-size: 2rem;
+}

@@ -1,16 +1,19 @@
+//Vendor
+import { useContext, useEffect, useState } from "react";
 //Components
-import { useEffect, useState } from "react";
 import { Card } from "../components/books-screen/Card";
+//Context
+import { BooksContext } from "../contexs/BooksContex";
 
 export const BooksScreen = () => {
-  const [dataResult, setDataResult] = useState([]);
+  const { dataResultBooks, setDataResultBooks } = useContext(BooksContext);
   const [dataResultAuthors, setDataResultAuthors] = useState([]);
 
   useEffect(() => {
     fetch("https://testbookhelio.herokuapp.com/api/events/books")
       .then((response) => response.json())
       .then((data) => {
-        return setDataResult(data.books);
+        return setDataResultBooks(data.books);
       });
   }, []);
 
@@ -22,11 +25,7 @@ export const BooksScreen = () => {
       });
   }, []);
 
-  const prueba = (e) => {
-    console.log("Funciono");
-  };
-
-  if (dataResult.length === 0) {
+  if (dataResultBooks.length === 0) {
     return null;
   }
 
@@ -38,7 +37,7 @@ export const BooksScreen = () => {
       <main className="books-screen">
         <h2 className="books-screen__title">Books Viewer</h2>
         <div className="books-screen__grid">
-          {dataResult.map((value) => {
+          {dataResultBooks.map((value) => {
             return (
               <Card
                 key={value._id}

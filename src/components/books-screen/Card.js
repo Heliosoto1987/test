@@ -1,18 +1,18 @@
+//Vendor
+import { useContext } from "react";
+//Router
 import { useNavigate } from "react-router";
+//Context
+import { BooksContext } from "../../contexs/BooksContex";
 
-export const Card = ({
-  author,
-  isbn,
-  nameBook,
-  firstName,
-  lastName,
-  nameAuthor,
-  id,
-}) => {
+export const Card = ({ nameBook, firstName, lastName, id }) => {
+  const { setIdBook } = useContext(BooksContext);
   const navigate = useNavigate();
   const prueba = ({ target }) => {
     navigate("/detailedbook");
+    setIdBook(target.value);
   };
+
   return (
     <button onClick={prueba} value={id} className="book-card">
       {nameBook ? (

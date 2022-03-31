@@ -1,6 +1,7 @@
-//hooks
-import { useNavigate } from "react-router-dom";
+//Hooks
 import { useForm } from "../hooks/useForm";
+//Router
+import { useNavigate } from "react-router-dom";
 
 export const LoginScreen = () => {
   const navigate = useNavigate();
@@ -28,13 +29,18 @@ export const LoginScreen = () => {
         if (data.ok === true) {
           navigate("/book");
         }
+        if (data.ok === false) {
+          alert("Email or password do not exist");
+        }
       });
   };
   return (
     <div className="login-screen">
-      <div>LoginScreen</div>
+      <h2>LoginScreen</h2>
       <form onSubmit={handleSubmit} className="login__form">
-        <label htmlFor="email">Email</label>
+        <label className="login__form--label" htmlFor="email">
+          Email
+        </label>
         <input
           onChange={handleInputChange}
           name="email"
@@ -42,7 +48,9 @@ export const LoginScreen = () => {
           type="text"
           value={email}
         />
-        <label htmlFor="password">Password</label>
+        <label className="login__form--label" htmlFor="password">
+          Password
+        </label>
         <input
           onChange={handleInputChange}
           name="password"
@@ -50,7 +58,9 @@ export const LoginScreen = () => {
           type="password"
           value={password}
         />
-        <button type="submit">Enviar</button>
+        <button className="login__form--submit" type="submit">
+          Login
+        </button>
       </form>
     </div>
   );

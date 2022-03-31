@@ -1,6 +1,7 @@
-//hooks
-import { useNavigate } from "react-router-dom";
+//Hooks
 import { useForm } from "../hooks/useForm";
+//Router
+import { useNavigate } from "react-router-dom";
 
 export const RegisterScreen = () => {
   const navigate = useNavigate();
@@ -27,46 +28,58 @@ export const RegisterScreen = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         if (data.ok === true) {
-          alert("Usuario Creado con exito");
+          alert("User created successfully");
           navigate("/login");
         }
         if (data.ok === false) {
-          alert("Usuario o Contraseña ya existen, Usuario no ha sido creado");
+          alert(
+            "The username or password already exists, the username has not been created"
+          );
         }
       });
   };
   return (
-    <>
-      <div>Register</div>
-      <form onSubmit={handleSubmit} className="login__form">
-        <label htmlFor="name">name</label>
+    <div className="register-screen">
+      <h2>Register</h2>
+      <form onSubmit={handleSubmit} className="register__form">
+        <label className="register__form--labels" htmlFor="name">
+          Name
+        </label>
         <input
+          className="register__form--inputs"
           onChange={handleInputChange}
           name="name"
           id="name"
           type="text"
           value={name}
         />
-        <label htmlFor="email">Email</label>
+        <label className="register__form--labels" htmlFor="email">
+          Email
+        </label>
         <input
+          className="register__form--inputs"
           onChange={handleInputChange}
           name="email"
           id="email"
           type="text"
           value={email}
         />
-        <label htmlFor="password">Password</label>
+        <label className="register__form--labels" htmlFor="password">
+          Password
+        </label>
         <input
+          className="register__form--inputs"
           onChange={handleInputChange}
           name="password"
           id="password"
           type="password"
           value={password}
         />
-        <button type="submit">Enviar</button>
+        <button className="register__form--btn-submit" type="submit">
+          Enviar
+        </button>
       </form>
-    </>
+    </div>
   );
 };
