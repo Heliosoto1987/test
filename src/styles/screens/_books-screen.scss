@@ -20,12 +20,18 @@
 @media screen and (max-width: 450px) {
   .books-screen__grid {
     grid-template-columns: 1fr;
+    
+  }
+
+  .books-screen{
+    height: 100%;
   }
 }
 
 @media screen and (min-width: 451px) {
   .books-screen__grid {
     grid-template-columns: 1fr 1fr;
+ 
   }
 }
 
