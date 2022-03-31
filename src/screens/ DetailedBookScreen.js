@@ -25,12 +25,15 @@ export const DetailedBookScreen = () => {
       </button>
       <div className="detailbook-screen__box">
         <div className="detailbook-screen__box--items">
+          <h4>Name of the book:</h4>
           {paintingDetails[0]?.name}
         </div>
         <div className="detailbook-screen__box--items">
+          <h4>Name of the Author:</h4>
           {paintingDetails[0]?.author}
         </div>
         <div className="detailbook-screen__box--items">
+          <h4>ISBN number</h4>
           {paintingDetails[0]?.isbn}
         </div>
       </div>
