@@ -13,12 +13,16 @@ developing
 
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.
 
-Installation:
-
-`npm install`
-
 To Start Server:
 
-`npm start`
+`npm run dev`
 
-To Visit App:
+End Points:
+https://testbookhelio.herokuapp.com/api/auth/register | Register - POST
+https://testbookhelio.herokuapp.com/api/auth/login | Login - POST
+https://testbookhelio.herokuapp.com/api/events/author | Create author - POST
+https://testbookhelio.herokuapp.com/api/events/book | Create book - POST
+https://testbookhelio.herokuapp.com/api/events/books | Get books - GET
+http://localhost:4000/api/events/book/:id | Get book by id - GET
+https://testbookhelio.herokuapp.com/api/events/Authors | Get authors - GET
+https://testbookhelio.herokuapp.com/api/events/author/:id | Get authors by id - GET
